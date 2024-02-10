@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS drag&drop intersetion observer</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <main>
+            <div id="contents">
+                <p>
+                    <a href="https://youtube.com"><i>Youtube</i></a>
+                </p>
+                <p>
+                    <a href="https://google.com"><b>Google</b></a>
+                </p>
+                <p><a href="https://yandex.ru">Yandex</a></p>
+            </div>
+
+            <div class="gallery">
+                <div class="active"></div>
+                <div class="items">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+
+            <div class="list-container anim">
+                <ul id="list">
+                    <li>Лучший фильм🤩</li>
+                    <li>Хороший фильм😁</li>
+                    <li>Можно было и лучше🫤</li>
+                    <li>Никому не посоветую😟</li>
+                    <li>Худший фильм🥱</li>
+                </ul>
+            </div>
+
+            <div class="slider-container anim">
+                <div class="slider">
+                    <div class="slider-hand"></div>
+                </div>
+            </div>
+
+            <div class="basket-container anim">
+                <div class="products-container">
+                    <div class="products" draggable="true" ondragstart="drag(event)">
+                        Слово пацана - P200
+                    </div>
+                    <div class="products" draggable="true" ondragstart="drag(event)">
+                        Сверхъестественное - P535
+                    </div>
+                    <div class="products" draggable="true" ondragstart="drag(event)">
+                        Подписка (месяц) - P350
+                    </div>
+                </div>
+
+                <div class="basket" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    Корзина
+                    <p class="total">Итого: $0</p>
+                </div>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

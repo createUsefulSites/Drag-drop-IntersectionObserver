@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+    font-family: 'Montserrat', serif;
+}
+
+#contents {
+    margin: 30px auto 120px auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    color: aliceblue;
+}
+
+#contents a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+}
+
+#contents a:hover {
+    color: aquamarine;
+}
+
+.gallery {
+    position: relative;
+    margin: 0 auto;
+    width: 37vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+
+    transition: 1.5s;
+}
+
+.active {
+    width: 200px;
+    height: 300px;
+    margin: 10px 0;
+    background: url('https://upload.wikimedia.org/wikipedia/ru/c/c3/Interstellar_2014.jpg')
+        no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.items {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.item {
+    width: 100px;
+    height: 150px;
+    margin: 0 0 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.item:nth-child(1) {
+    background: url('https://upload.wikimedia.org/wikipedia/ru/c/c3/Interstellar_2014.jpg')
+        no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item:nth-child(2) {
+    background: url('https://upload.wikimedia.org/wikipedia/ru/3/30/Iron_man_filmposter.jpg')
+        no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item:nth-child(3) {
+    background: url('https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/600x900')
+        no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item:nth-child(4) {
+    background: url('https://upload.wikimedia.org/wikipedia/ru/b/b9/Intouchables.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item:nth-child(5) {
+    background: url('https://upload.wikimedia.org/wikipedia/ru/b/bf/%D0%9E%D0%BF%D0%BF%D0%B5%D0%BD%D0%B3%D0%B5%D0%B9%D0%BC%D0%B5%D1%80_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpg')
+        no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.list-container {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    transition: 1.5s;
+}
+
+.list-container ul {
+    list-style: none;
+}
+
+.list-container ul li {
+    color: aliceblue;
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.selected {
+    background: aqua;
+    color: black !important;
+}
+
+.slider-container {
+    width: 300px;
+    margin: 50px auto;
+    position: relative;
+
+    transition: 1.5s;
+}
+
+.slider {
+    width: 120%;
+    height: 10px;
+    background-color: gray;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider-hand {
+    width: 15px;
+    height: 30px;
+    background-color: red;
+    border-radius: 9px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: grab;
+}
+
+.basket-container {
+    margin: 20px auto;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    transition: 1.5s;
+}
+
+.products-container {
+    margin: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.products {
+    width: 100%;
+    height: auto;
+    background: aliceblue;
+    color: black;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.basket {
+    position: relative;
+    padding: 50px;
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    font-size: 1.1rem;
+    line-height: 3rem;
+}
+
+.total {
+    text-decoration: overline;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateX(-20%);
+}
